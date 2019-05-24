@@ -36,13 +36,13 @@ export class DaysService {
   }
 
   getDates(startDate: Date, stopDate: Date) {
-    var dateArray = [];
-    Date currentDate = startDate;
+    const dateArray = [];
+    const currentDate = startDate;
     while (currentDate <= stopDate) {
         dateArray.push(currentDate);
-        currentDate = currentDate.addDays(1);
+        currentDate.setDate(currentDate.getDate() + 1);
     }
     return dateArray;
   }
-  
+
 }

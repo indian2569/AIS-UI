@@ -10,8 +10,8 @@ import { WorkDay } from '../model/WorkDay';
 export class MonthWorklogComponent implements OnInit {
 
   @Input() daysInMonth: WorkDay[];
-  displayedColumns: string[] = ['Den', 'Prichod do prace', 'Odchod na Obed',
-   'Prichod z Obeda', 'Odchod z prace', 'Pracovny fond', 'Odracovane hodiny','Eventy'] ;
+  displayedColumns: string[] = ['Datum', 'Prichod', 'Obed od',
+    'Obed do', 'Odchod', 'Opdracovano', 'Vykaz', 'Udalosti'];
 
   constructor() { }
 
