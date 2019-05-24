@@ -1,0 +1,5 @@
+<span *ngFor="let event of daysInLine.events">{{event}}
+  <button class="delete" title="Odober typ" *ngIf="canDeleteEvents"
+      (click)="deleteEvent()"> x </button><br/></span>
+<button class="delete" title="Pridaj typ dna" *ngIf="canAddEvents"
+      (click)="addDayEvent()"> + </button>

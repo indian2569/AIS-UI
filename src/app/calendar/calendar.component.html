@@ -1,0 +1,11 @@
+<div>
+<label>Vyber zamestnanca:</label>
+<section>
+  <option *ngFor="let user of users" value="user">{{user.name}}</option>
+</section>
+</div>
+<div>
+  <app-month-worklog
+    [daysInMonth]="days">
+  </app-month-worklog>
+<div>

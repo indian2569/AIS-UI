@@ -1,0 +1,28 @@
+<p>
+  Vykaz za mesiac {{getDateForSelection()}}.!
+</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th *ngFor="let columName of displayedColumns">{{columName}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let dayLine of daysInMonth">
+      <td> {{dayLine.date}}</td>
+      <td>{{getHours(dayLine.workStart) | date:'HH:mm:ss'}}</td>
+      <td>{{getHours(dayLine.lunchStart) | date:'HH:mm:ss'}}</td>
+      <td>{{getHours(dayLine.lunchEnd) | date:'HH:mm:ss'}}</td>
+      <td>{{getHours(dayLine.workEnd) | date:'HH:mm:ss'}}</td>
+      <td>{{expectedHours}}</td>
+      <td>{{dayLine.workedHours}}</td>
+      <td>
+        <app-day-line [daysInLine]="dayLine"></app-day-line>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
